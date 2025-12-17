@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: mc;
+    src: url(../fonts/GreatVibes-Regular.ttf);
+}
+
+.container{
+    width: 80%;
+    height: 100vh;
+    background-color:rgb(34, 18, 7);
+    margin: 0 auto;
+}
+
+.name{
+    font-family: mc;
+    font-size: 36px;
+    padding-top: 24px;
+    color: rgb(253, 216, 216);
+    text-align: center;
+}
+
+.gallery_img{
+    object-fit: cover;
+    height: 350px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+}
+
+#snow{
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none !important; /* важно */
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #snow{ display: none !important; }
+}
+
+/* snow-end */
+
+@media screen and (max-wight: 390px) {
+
+    .container{
+        /* background-color: darkturquoise; */
+        height: auto;
+    }
+
+    .gallery{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery_img{
+        margin-bottom: 24px;
+    }
+    
+}
